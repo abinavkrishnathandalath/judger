@@ -1,0 +1,89 @@
+body {
+  font-family: 'Comic Neue', cursive;
+  background-color: #1a1a2e;
+  color: #1c0978;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+h1 {
+  font-family: 'Comic Neue', sans-serif;
+  font-size: 3em;
+  color: #c6b1b1;
+  text-shadow: 2px 2px #00000055;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: #d5c6c6;
+  margin-bottom: 30px;
+}
+
+input[type="password"] {
+  padding: 12px;
+  font-size: 18px;
+  width: 300px;
+  border-radius: 10px;
+  border: none;
+  background-color: #282843;
+  color: #e5e9e1;
+  box-shadow: 0 0 12px #03dac650;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 24px;
+  font-size: 18px;
+  color: #CBD6E2;
+  background-color: ;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px #1b0b78aa;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: rotate(-2deg) scale(1.05);
+  background-color: #9b6e8c;
+}
+
+.result {
+  margin-top: 30px;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.visible { opacity: 1; }
+
+.weak { color: #a18686; }
+.meh { color: #ffec3d; }
+.strong { color: #66ff66; }
+.genius { color: #57f2ff; }
+
+/* Funny Animations */
+@keyframes wobble {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(3deg); }
+}
+
+@keyframes jump {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes spinPop {
+  0% { transform: rotate(0) scale(0.5); opacity: 0; }
+  50% { transform: rotate(180deg) scale(1.2); opacity: 1; }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.wobble { animation: wobble 0.6s ease-in-out; }
+.jump { animation: jump 0.5s ease; }
+.spinPop { animation: spinPop 1s ease; }
